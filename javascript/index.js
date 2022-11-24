@@ -8,7 +8,7 @@ function updateTime() {
 
     losAngelesTimeElement.innerHTML = moment
       .tz("America/Los_Angeles")
-      .format("h:mm:ss:SSS [<small>]A[</small>]");
+      .format("h:mm:ss [<small>]A[</small>]");
   }
 
   //paris
@@ -21,11 +21,11 @@ function updateTime() {
 
     parisTimeElement.innerHTML = moment
       .tz("Europe/paris")
-      .format("h:mm:ss:SSS [<small>]A[</small>]");
+      .format("h:mm:ss [<small>]A[</small>]");
   }
 }
 updateTime();
-setInterval(updateTime, 1);
+setInterval(updateTime, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
